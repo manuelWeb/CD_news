@@ -30,18 +30,19 @@
     "lk": "achat_confiance/conditions-generales-de-vente.aspx"
   },
   "brand": {
-    "name"   : "L'ATELIER de Lucie",
-    "url"    : "https://latelierdelucie.com",
-    "miror"  : "Newsletters/miroir/Relance_panier_",
-    "cpt"    : "compte_client/compte-perso.aspx",
-    "panier" : "commande/panier.aspx",
-    "assur": ["achat_confiance/", "garanties.aspx", "informations-livraison.aspx", "paiement-securise.aspx", "garanties.aspx"],
-    "contact": "lucie_et_vous/contact.aspx?val=A",
-    "desabo" : "animation/DesinscriptionNewsletter.aspx"
+    "name"    : "CHIEN, CHAT ET COMPAGNIE",
+    "leg_name": "SWI SAS",
+    "url"     : "https://latelierdelucie.com",
+    "miror"   : "Newsletters/miroir/Relance_panier_",
+    "cpt"     : "compte_client/compte-perso.aspx",
+    "panier"  : "commande/panier.aspx",
+    "assur"   : ["achat_confiance/", "garanties.aspx", "informations-livraison.aspx", "paiement-securise.aspx", "garanties.aspx"],
+    "contact" : "lucie_et_vous/contact.aspx?val=A",
+    "desabo"  : "animation/DesinscriptionNewsletter.aspx"
   },
   "nav": {
     "link": ["broderie-canevas-point-noue", "loisirs-creatifs", "tricot-crochet", "couture-mercerie", "arts-graphiques", "puzzles"],
-    "txt": ["Broderie,<br />canevas", "Loisirs<br />Créatifs", "Tricot &<br />crochet", "Couture &<br />mercerie", "Arts<br />graphiques", "Puzzles"]
+    "txt": ["Hygiène & soin", "Promenade & vêtements", "Jeux & loisirs", "Astuces & gourmandises", "Maison & jardin"]
   },
   "track": {
     "content": ["logo", "compte", "btn_retrouver", "visuel", "accroche", "prix", "btn_valider", "garantie", "livraison", "paiement", "garantie", "rgpd", "cgv", "contact", "desabo", "URL"]
@@ -54,7 +55,14 @@
     "color": {
       "primary"  : "#71439A",
       "secondary": "",
-      "tertiary" : ""
+      "tertiary" : "",
+      "nav": {
+        "item1": "#0D7AC4",
+        "item2": "#E94E39",
+        "item3": "#8B61B0",
+        "item4": "#F26700",
+        "item5": "#719835"
+      }
     },
     "totWidth": 636,
     "column"  : 44,
@@ -66,7 +74,7 @@
     "topShad" : false,
     "shadLR"  : false,
     "shadLR_H": "1140",
-    "abspath" : true
+    "abspath" : false
   },
   "url": {
     "bf": "no-def",
