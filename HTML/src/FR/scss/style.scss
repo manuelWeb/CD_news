@@ -171,6 +171,16 @@ td {
     line-height: normal;
   }
 }
+// old nav
+.bdrs-20 {border-radius: 20px;}
+.pdrpdl6 {padding-right: 6px; padding-left: 6px;}
+.univ {
+  display: block;
+  height: 36px; padding-top: 4px; // 40px
+  text-transform: uppercase; font-family: Verdana, Geneva, sans-serif; font-size:12px; color: #FFFFFF;
+}
+// old nav
+
 
 .nav-ba {
   @extend .nav;
