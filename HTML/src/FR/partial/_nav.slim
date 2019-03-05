@@ -20,9 +20,8 @@ tr
                       td.mob_d_none width="4" bgcolor="red"
                     - if i >= 1
                       td width="5" bgcolor="blue"
-                    / == i < 1 ? '<td width="4" bgcolor="red" class="mob_d_none"></td>' : '<td width="5" bgcolor="#006737" style="border-left: 1px solid #FFFFFF; "></td>'
-                    td.tac.cel-hov.bdrs-20 align="center" valign="middle" bgcolor="#{$bgNav[i]}" height="40"
-                      a.univ.tdn.tdn-hov.pdrpdl6.bdrs-20 href="" target="_blank"
+                    td.nav.tac.cel-hov.bdrs-20 align="center" valign="middle" bgcolor="#{$bgNav[i]}" height="40"
+                      a.univ.tdn.tdn-hov.bdrs-20 href="" target="_blank"
                         == univ[i]
                 tr
                   td height="4"
@@ -31,9 +30,14 @@ tr
               *$tab.c0
                 tr
                   - for i in 3..4
-                    == i < 1 ? '<td width="4" bgcolor="red"></td>' : '<td width="5" bgcolor="#006737" style="border-left: 1px solid #FFFFFF; "></td>'
-                    td.tac.cel-hov.bdrs-20 align="center" valign="middle" bgcolor="#{$bgNav[i]}" height="40"
-                      a.univ.tdn.tdn-hov.pdrpdl6.bdrs-20 href="" target="_blank"
-                        == univ[i] + " i:" + i.to_s
+                    - if i < 1
+                      td.mob_d_none width="4" bgcolor="red"
+                    - if i >= 1
+                      == i < 4 ? '<td width="5" bgcolor="darkblue" class="mob_d_none"></td>' : '<td width="5" bgcolor="blue"></td>'
+                      / :i == 1 ? td width="5" bgcolor="darkblue" : td width="5" bgcolor="blue"
+                    td.nav.tac.cel-hov.bdrs-20 align="center" valign="middle" bgcolor="#{$bgNav[i]}" height="40"
+                      a.univ.tdn.tdn-hov.bdrs-20 href="" target="_blank"
+                        == univ[i]
+                        / == univ[i] + " i:" + i.to_s
                   - if i == 4
                     td.mob_d_none width="4" bgcolor="red"
