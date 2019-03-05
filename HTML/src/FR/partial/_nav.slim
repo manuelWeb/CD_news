@@ -10,10 +10,24 @@ tr
   td
     *$tab.c0fullw
       tr
-        - for i in 0..4
-          / == i > 1 ? '<td width="8" bgcolor="#006737"></td>' : '<td width="6" bgcolor="#006737" style="border-left: 1px solid #FFFFFF; "></td>'
-          td.tac.cel-hov.bdrs-20 align="center" valign="middle" bgcolor="#{$bgNav[i]}" height="40"
-            a.univ.tdn.tdn-hov.pdrpdl6.bdrs-20 href="" target="_blank"
-              == univ[i]
-          -if i == 5
-            td width="6" bgcolor="#006737"
+        - for j in 0..1
+          - if j == 0
+            td.mob_d_b valign="middle"
+              *$tab.c0
+                tr
+                  - for i in 0..2
+                    == i < 1 ? '<td width="4" bgcolor="red" class="mob_d_none"></td>' : '<td width="5" bgcolor="#006737" style="border-left: 1px solid #FFFFFF; "></td>'
+                    td.tac.cel-hov.bdrs-20 align="center" valign="middle" bgcolor="#{$bgNav[i]}" height="40"
+                      a.univ.tdn.tdn-hov.pdrpdl6.bdrs-20 href="" target="_blank"
+                        == univ[i]
+          - if j == 1
+            td.mob_d_b valign="middle"
+              *$tab.c0
+                tr
+                  - for i in 3..4
+                    == i < 1 ? '<td width="4" bgcolor="red"></td>' : '<td width="5" bgcolor="#006737" style="border-left: 1px solid #FFFFFF; "></td>'
+                    td.tac.cel-hov.bdrs-20 align="center" valign="middle" bgcolor="#{$bgNav[i]}" height="40"
+                      a.univ.tdn.tdn-hov.pdrpdl6.bdrs-20 href="" target="_blank"
+                        == univ[i] + " i:" + i.to_s
+                  - if i == 4
+                    td.mob_d_none width="4" bgcolor="red"
