@@ -16,10 +16,16 @@ tr
               *$tab.c0
                 tr
                   - for i in 0..2
-                    == i < 1 ? '<td width="4" bgcolor="red" class="mob_d_none"></td>' : '<td width="5" bgcolor="#006737" style="border-left: 1px solid #FFFFFF; "></td>'
+                    - if i < 1
+                      td.mob_d_none width="4" bgcolor="red"
+                    - if i >= 1
+                      td width="5" bgcolor="blue"
+                    / == i < 1 ? '<td width="4" bgcolor="red" class="mob_d_none"></td>' : '<td width="5" bgcolor="#006737" style="border-left: 1px solid #FFFFFF; "></td>'
                     td.tac.cel-hov.bdrs-20 align="center" valign="middle" bgcolor="#{$bgNav[i]}" height="40"
                       a.univ.tdn.tdn-hov.pdrpdl6.bdrs-20 href="" target="_blank"
                         == univ[i]
+                tr
+                  td height="4"
           - if j == 1
             td.mob_d_b valign="middle"
               *$tab.c0
