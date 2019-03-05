@@ -1,0 +1,42 @@
+-univ = $objso["nav"]["txt"];univItem = $objso["nav"]["link"]
+
+tr
+  td
+    img.centw src==(($abspath == true ? $srcAbs : $srcRel)+"s2_navTop.png") width="616" alt=""
+tr
+  td
+    *$tab.c0fullw
+      tr
+        - for j in 0..2
+          - if j < 2
+            td.mob_d_b valign="middle"
+              *$tab.c0fullw
+                tr
+                  - if j == 0
+                    - for i in 0..2
+                      td.nav.mob_33.tac.cel-hov class==((i < 3 == true ? "bdb2" : "")) align="center" valign="middle" bgcolor="#674FA0" height="44"
+                        a.univ.tdn.tdn-hov.db class==((i < 2 == true ? "bdr2" : "")) href==($url+univItem[i]+"/Univers.html#{$goTk[:p1]}#{univItem[i]}#{$campaign}") target="_blank"
+                          == univ[i]
+                      // border physique (separation of nav items)
+                      *$td.vhamidd class="vam mob_d_none" bgcolor="#674FA0"
+                        *$tab.c0
+                          tr
+                            - if i < 2
+                              td.mob_d_none width="2" height="28" bgcolor="#ffffff"
+                            - else
+                              td.mob_d_none width="2" height="28" bgcolor="#ffffff"
+
+                  - if j == 1
+                    - for i in 3..5
+                      td.nav.mob_33.tac.cel-hov align="center" valign="middle" bgcolor="#674FA0" height="44"
+                        a.univ.tdn.tdn-hov.db class==((i < 5 == true ? "bdr2" : "")) href==($url+univItem[i]+"/Univers.html#{$goTk[:p1]}#{univItem[i]}#{$campaign}") target="_blank"
+                          == univ[i]
+                      - if i < 5
+                        *$td.vhamidd class="vam mob_d_none" bgcolor="#674FA0"
+                          *$tab.c0
+                            tr
+                              td.mob_d_none width="2" height="28" bgcolor="#ffffff"
+tr
+  td
+    img.centw src==(($abspath == true ? $srcAbs : $srcRel)+"s2_navBottom.png") width="616" alt=""
+

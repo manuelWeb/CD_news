@@ -1,0 +1,16 @@
+*$tab.c0 class="m0auto mobile_320" width="#{$objso["layout"]["totWidth"]}"
+  tr
+    td.mob_d_none width="#{$objso['layout']['bdr-l']}"
+
+    / td.lh16.pdt4.pdb4 align="center"
+    *$td.pdrl4 class="pdt4 pdb4 lh16"
+      p.fz12.ff1 align="center"
+        == ($objso["head_doc"]["fr"][0])
+        br
+        span.fz10
+          ==($objso["head_doc"]["fr"][1]) + ' '
+          a.tdu href==($vr.arg('brand','url')+'/'+$vr.arg('brand','miror')+$dt+"/#{$country.upcase}/index.htm") target="_blank"
+            strong.tdu
+              == ($objso["head_doc"]["fr"][2])
+
+    td.mob_d_none width="#{$objso['layout']['bdr-l']}"

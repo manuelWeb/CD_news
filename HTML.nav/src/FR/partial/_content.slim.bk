@@ -1,0 +1,9 @@
+/ _content
+tr
+  td.pt5
+    a href==($happyNewYear_txt) target="_blank"
+      img src==(($abspath == true ? $srcAbs : $srcRel)+"happyNewYear_txt.jpg") width="620" border="0" alt==($alt_happyNewYear_txt)
+tr
+  td
+    a href==($happyNewYear_btn) target="_blank"
+      img src==(($abspath == true ? $srcAbs : $srcRel)+"happyNewYear_btn.jpg") width="620" border="0" alt==($alt_happyNewYear_btn)

@@ -1,0 +1,24 @@
+*$tab.c0m320 class="m0auto"
+  tr
+    *$td.acenter colspan="3"
+      img.centw src==(($abspath == true ? $srcAbs : $srcRel)+"pkWrp_shad_top.png") width="636" alt=""
+  tr
+    / ext marges(6) + external gutter(4) = 10
+    td.mob_d_none valign="top" width="#{$objso['layout']['bdr-l']+$objso['layout']['mr-l']}"
+      img.cent src==(($abspath == true ? $srcAbs : $srcRel)+"pkWrp_shad_left.png") width="10" alt=""
+
+    td valign="top"
+      *$tab.c0fullw
+        tr
+          td
+            *$tab.c0fullw
+              tr
+                td.pdt16.pdb12.pdl10.mob_nopdl.ffRobLight.fz30.mob_tac.color-prim valign="top"
+                  | Actuellement dans votre panier :
+              tr
+                td
+                  == Slim::Template.new('./src/FR/partial/_pk.slim').render
+
+    / ext marges(6) + external gutter(4) = 10
+    td.mob_d_none valign="top" width="#{$objso['layout']['bdr-l']+$objso['layout']['mr-l']}"
+      img.cent src==(($abspath == true ? $srcAbs : $srcRel)+"pkWrp_shad_right.png") width="10" alt=""

@@ -1,0 +1,18 @@
+// origine
+-univ = ["0", "Hygiène & soin", "Promenade, vêtements & paniers", "Jeux & loisirs", "Astuces & gourmandises", "Maison, déco & jardin"]
+// cut
+-univ = ["0", "Hygiène & soin", "Promenade & vêtements ", "Jeux & loisirs", "Astuces & gourmandises", "Maison & jardin"]
+// link
+-univItem = ["0", "hygiene-soin", "promenade-vetements-paniers", "jeux-loisirs", "astuces-gourmandises", "maison-deco-jardin"]
+-$bgNav = ["0", "#3479BE","#D95943","#8564AB","#E36F26","#799644"]
+tr
+  td bgcolor="#006737" style="border-right: 1px solid #FFFFFF;"
+    table border="0" cellpadding="0" cellspacing="0" width="618"
+      tr
+        - for i in 1..5
+          == i > 1 ? '<td width="8" bgcolor="#006737"></td>' : '<td width="6" bgcolor="#006737" style="border-left: 1px solid #FFFFFF; "></td>'
+          td.tac.cel-hov.bdrs-20 align="center" valign="middle" bgcolor="#{$bgNav[i]}" height="40"
+            a.univ.tdn.tdn-hov.pdrpdl6.bdrs-20 href==($url+univItem[i]+"/Univers.html#{$srcmedium[0]}#{$content[0]}nav_#{univItem[i]}#{$campaign}") target="_blank"
+              == univ[i]
+          -if i == 5
+            td width="6" bgcolor="#006737"

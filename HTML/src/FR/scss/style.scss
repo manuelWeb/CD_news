@@ -1,0 +1,274 @@
+@charset "utf-8";
+$primary: #71439a;
+$ff1: Verdana, 'Geneva', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$ff1_1: 'Roboto', Arial, 'Helvetica Neue', sans-serif;
+$ff1_2: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$ff2: Georgia, 'Times New Roman', Times, serif;
+
+// magic mixin for padding
+@mixin pdt($val) {
+  padding-top: $val + px;
+}
+@mixin pdr($val) {
+  padding-right: $val + px;
+}
+@mixin pdb($val) {
+  padding-bottom: $val + px;
+}
+@mixin pdl($val) {
+  padding-left: $val + px;
+}
+.pdt4 {
+  @include pdt(4);
+}
+.pdr4 {
+  @include pdr(4);
+}
+.pdb4 {
+  @include pdb(4);
+}
+.pdl4 {
+  @include pdl(4);
+}
+.pdt6 {
+  @include pdt(6);
+}
+.pdt8 {
+  @include pdt(8);
+}
+.pdt10 {
+  @include pdt(10);
+}
+.pdt16 {
+  @include pdt(16);
+}
+.pdt24 {
+  @include pdt(24);
+}
+.pdr10 {
+  @include pdr(10);
+}
+.pdr24 {
+  @include pdr(24);
+}
+.pdb4 {
+  @include pdb(4);
+}
+.pdb6 {
+  @include pdb(6);
+}
+.pdb8 {
+  @include pdb(8);
+}
+.pdb12 {
+  @include pdb(12);
+}
+.pdb16 {
+  @include pdb(16);
+}
+.pdl10 {
+  @include pdl(10);
+}
+.pdl24 {
+  @include pdl(24);
+}
+
+// basic OCSS
+.lh0 {
+  line-height: 0;
+}
+.lh16 {
+  line-height: 16px;
+}
+.lh32 {
+  line-height: 32px;
+}
+
+.vam {
+  vertical-align: middle;
+}
+.tac {
+  text-align: center;
+}
+
+.db {
+  display: block;
+}
+.dib {
+  display: inline-block;
+}
+.desk_dn {
+  display: none;
+}
+.m0auto {
+  margin: 0 auto;
+}
+
+.ff1 {
+  font-family: $ff1;
+}
+.ff1_1 {
+  font-family: $ff1_1;
+}
+.ff1_2 {
+  font-family: $ff1_2;
+}
+.ff2 {
+  font-family: $ff2;
+}
+.fwb {
+  font-weight: bold;
+}
+.fz10 {
+  font-size: 10px;
+}
+.fz12 {
+  font-size: 12px;
+}
+.fz14 {
+  font-size: 14px;
+}
+.fz16 {
+  font-size: 16px;
+}
+.fz18 {
+  font-size: 18px;
+}
+
+.tdn {
+  text-decoration: none;
+}
+.tdu {
+  text-decoration: underline;
+}
+
+.bds-3 {
+  border-radius: 3px;
+}
+
+.cf {
+  color: #ffffff;
+}
+
+.bgcf {
+  background-color: #ffffff;
+}
+.bgcc {
+  background-color: #cccccc;
+}
+.bgce {
+  background-color: #eeeeee;
+}
+
+td {
+  p {
+    margin: 0;
+    padding: 0;
+    font-family: $ff1;
+  }
+  img {
+    display: block;
+    line-height: normal;
+  }
+}
+
+.nav-ba {
+  @extend .nav;
+  font-weight: bold;
+  background-color: #ffff00;
+}
+
+// navigation &:hover
+.nav {
+  @extend .vam;
+  line-height: normal;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: $ff2;
+  font-style: italic;
+  // background-color: #674FA0; -> cf bgcolor in html to keep hover free to use
+}
+.tdn-hov:hover {
+  text-decoration: underline !important;
+}
+.cel-hov:hover {
+  background-color: #e97b0a;
+}
+.nav a {
+  line-height: 16px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.ffRobLight {
+  font-family: $ff1_1;
+  font-weight: 300;
+}
+.fz30 {
+  font-size: 30px;
+}
+.color-prim {
+  color: #c70082;
+}
+.accTxt {
+  line-height: 20px;
+  font-size: 16px;
+  font-family: $ff1_2;
+  color: #444544;
+  b {
+    font-weight: bold;
+    color: $primary;
+  }
+}
+.lib {
+  font-size: 16px;
+  font-family: $ff1;
+  color: #444444;
+  a {
+    color: #444444;
+    text-decoration: none;
+  }
+}
+.price {
+  padding: 6px 12px;
+  font-size: 21px;
+  font-weight: bold;
+  font-family: $ff1_2;
+  color: $primary;
+  border-radius: 6px;
+  background-color: #fbb600;
+  a {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+// table rassurance
+.trassur {
+
+  .txt {
+    @extend .pdt4;
+    font-family: $ff1;
+    font-size: 16px;
+    font-weight: 100;
+    a {
+      color: #ffffff;
+    }
+    .small {
+      font-size: 10px;
+    }
+  }
+
+}
+.rassur {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: $ff1;
+  color: #212121;
+  text-align: center;
+}
+.legal {
+  font-family: $ff1;
+  font-size: 11px;
+  color: #555555;
+  margin: 0;
+  text-align: justify;
+}

@@ -1,0 +1,51 @@
+- $rassur_txt = ["Satisfait<br />ou remboursé<br /><span class=\"small\">Retour ou Échange</span>", "Livraison<br />à la carte", "Paiement<br />sécurisé", "Garantie<br />2 ans"]
+
+*$tab.c0m320 class="m0auto" width="#{$objso["layout"]["totWidth"]}"
+  tr
+    td.mob_d_none width="#{$objso['layout']['bdr-l']}"
+
+    td.pdt16
+      *$tab.c0pd_r_l_4 class="m0auto mobile_320 trassur"
+        tr
+          td
+            img.centw src==(($abspath == true ? $srcAbs : $srcRel)+"foo_hr.png") width="616" alt=""
+        tr
+          td bgcolor="#{$primaryColor}"
+            *$tab.c0m320
+              tr
+                // mobile 2xTD > Satisfait + Livraison
+                *$td.vatop class="mob_d_b pdt8 pdb8"
+                  *$tab.c0m320
+                    tr
+                      - for i in 0..1
+                        td width="#{$column*3+$gutter*2}" align="center" valign="bottom"
+                          a href==("#{$url}#{$vr.arg('brand','assur')[0]+$vr.arg('brand','assur')[i+1]}#{$goTk[:p1]}#{$tkc[7+i]}#{$campaign}") target="_blank"
+                            img src==(($abspath == true ? $srcAbs : $srcRel)+"EltRassur#{i+1}.png") width="30" alt=""
+                        - if i < 1
+                          td.mob_d_none width="#{$gutter}"
+                    tr
+                      - for i in 0..1
+                        td.txt.lh16 align="center" valign="top"
+                          a.tdn href==("#{$url}#{$vr.arg('brand','assur')[0]+$vr.arg('brand','assur')[i+1]}#{$goTk[:p1]}#{$tkc[7+i]}#{$campaign}") target="_blank"
+                            == $rassur_txt[i]
+                        - if i < 1
+                          td.mob_d_none width="#{$gutter}"
+                // mobile 2xTD > Paiement + garantie
+                *$td.vatop class="mob_d_b pdt8 pdb8"
+                    *$tab.c0m320
+                      tr
+                        - for i in 1..2
+                          td width="#{$column*3+$gutter*2}" align="center" valign="bottom"
+                            a href==("#{$url}#{$vr.arg('brand','assur')[0]+$vr.arg('brand','assur')[i+2]}#{$goTk[:p1]}#{$tkc[8+i]}#{$campaign}") target="_blank"
+                              img src==(($abspath == true ? $srcAbs : $srcRel)+"EltRassur#{i+2}.png") width="30" alt=""
+                          - if i < 2
+                            td.mob_d_none width="#{$gutter}"
+                      tr
+                        - for i in 1..2
+                          td.txt.lh16 align="center" valign="top"
+                            a.tdn href==("#{$url}#{$vr.arg('brand','assur')[0]+$vr.arg('brand','assur')[i+2]}#{$goTk[:p1]}#{$tkc[8+i]}#{$campaign}") target="_blank"
+                              == $rassur_txt[i+1]
+                          - if i < 2
+                            td.mob_d_none width="#{$gutter}"
+
+    td.mob_d_none width="#{$objso['layout']['bdr-l']}"

@@ -1,0 +1,86 @@
+{
+  "date": "0319",
+  "campaignName": "_relance_panier",
+  "campaignNameM": "_relance_panier",
+  "title": {
+    "bf": "…",
+    "bv": "…",
+    "de": "…",
+    "fr": "L'ATELIER de Lucie",
+    "nl": "…",
+    "uk": "…"
+  },
+  "head_doc": {
+    "bf": "…",
+    "bv": "…",
+    "de": "…",
+    "fr": [
+      "Il est encore temps de valider votre panier, retrouvez-le en un clic ! ",
+      "Si la page ne s'affiche pas correctement consultez la",
+      "version en ligne"
+    ],
+    "nl": "…",
+    "uk": "…"
+  },
+  "rgpd": {
+    "s1a": "Merci de ne pas répondre à ce message.<br />Conformément au règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, les informations demandées par DOMOTI, responsable du traitement, sont nécessaires pour la gestion de votre commande et le suivi de notre relation commerciale. Vos données peuvent être louées, cédées ou échangées. Elles peuvent être communiquées à un tiers concerné dans le cadre d’un changement de contrôle, de fusion, de cession de fonds de commerce ou d’apport partiel d’actifs de DOMOTI. Vous disposez d’un droit d’accès, de rectification et d’opposition au traitement de ces données. Vous pouvez exercer l'ensemble de vos droits en écrivant à : ",
+    "s1b": " - 59 685 Roubaix Cedex ou par mail à l’adresse dpo-groupe-domoti@domoti.fr, en précisant votre nom, prénom, adresse, numéro de client et par mesure de sécurité, une copie de votre pièce d'identité.<br />Pour en savoir plus sur la politique de confidentialité des données, vous pouvez",
+    "s2": "cliquer ici",
+    "s3": "DOMOTI SAS, capital de 100 000€ - RCS Lille B 342 883 758.",
+    "lk": "achat_confiance/conditions-generales-de-vente.aspx"
+  },
+  "brand": {
+    "name"   : "L'ATELIER de Lucie",
+    "url"    : "https://latelierdelucie.com",
+    "miror"  : "Newsletters/miroir/Relance_panier_",
+    "cpt"    : "compte_client/compte-perso.aspx",
+    "panier" : "commande/panier.aspx",
+    "assur": ["achat_confiance/", "garanties.aspx", "informations-livraison.aspx", "paiement-securise.aspx", "garanties.aspx"],
+    "contact": "lucie_et_vous/contact.aspx?val=A",
+    "desabo" : "animation/DesinscriptionNewsletter.aspx"
+  },
+  "nav": {
+    "link": ["broderie-canevas-point-noue", "loisirs-creatifs", "tricot-crochet", "couture-mercerie", "arts-graphiques", "puzzles"],
+    "txt": ["Broderie,<br />canevas", "Loisirs<br />Créatifs", "Tricot &<br />crochet", "Couture &<br />mercerie", "Arts<br />graphiques", "Puzzles"]
+  },
+  "track": {
+    "content": ["logo", "compte", "btn_retrouver", "visuel", "accroche", "prix", "btn_valider", "garantie", "livraison", "paiement", "garantie", "rgpd", "cgv", "contact", "desabo", "URL"]
+  },
+  "ID": {
+    "bf": "1762", "bv": "1766", "de": "1765",
+    "fr": "1769", "nl": "1761", "uk": "1764"
+  },
+  "layout": {
+    "color": {
+      "primary"  : "#71439A",
+      "secondary": "",
+      "tertiary" : ""
+    },
+    "totWidth": 636,
+    "column"  : 44,
+    "gutter"  : 8,
+    "mr-l"    : 4,
+    "bdr-l"   : 6,
+    "addLogo" : true,
+    "addPromo": false,
+    "topShad" : false,
+    "shadLR"  : false,
+    "shadLR_H": "1140",
+    "abspath" : true
+  },
+  "url": {
+    "bf": "no-def",
+    "bv": "no-def",
+    "de": "no-def",
+    "fr": "www.latelierdelucie.fr",
+    "nl": "no-def",
+    "uk": "no-def"
+  },
+  "ray": "boutique/rayon_evenement.aspx?urlLangue=fr&nbp=99&pg=0&evenement_id=",
+  "_comment": "",
+  "gift": {
+    "code": "XXXX",
+    "alt" : ["", ""]
+  },
+  "prix": "..."
+}

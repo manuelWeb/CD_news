@@ -1,0 +1,29 @@
+table.mobile_320 width="636" border="0" cellpadding="0" cellspacing="0" align="center" style="margin: 0 auto;"
+  tr
+    td.mob_d_none width="#{$objso['layout']['bdr-l']}"
+
+    td.pdt16.pdb16 valign="top"
+      p.lh16.legal
+
+        == $vr.arg('rgpd','s1a')+$vr.arg('brand','name')+$vr.arg('rgpd','s1b')
+        a> href==( $url+$vr.arg('rgpd', 'lk')+$goTk[:p1]+$tkc[11]+$campaign ) style="color:#333333;" target="_blank" == $vr.arg('rgpd','s2')
+        br
+        br
+        == $vr.arg('rgpd','s3')
+        br
+        br
+
+      div style="text-align: center; "
+        font style="font-family: Verdana, Geneva, sans-serif; font-size: 11px; color: #555555"
+          a.tdn<> href==( $url+$vr.arg('rgpd', 'lk')+$goTk[:p1]+$tkc[12]+$campaign ) style="color:#333333;" target="_blank"
+            strong
+              u Conditions Générales de vente
+          | |
+          a.tdn<> href==( $url+$vr.arg('brand', 'contact')+$goTk[:p2]+$tkc[13]+$campaign ) style="color: #333333; " target="_blank"
+            strong
+              u Contact
+          | |
+          a.tdn href==( $url+$vr.arg('brand', 'desabo')+$goTk[:p1]+$tkc[14]+$campaign ) style="color: #333333; " target="_blank"
+            u Se désabonner
+
+    td.mob_d_none width="#{$objso['layout']['bdr-l']}"

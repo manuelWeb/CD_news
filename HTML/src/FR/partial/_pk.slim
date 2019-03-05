@@ -1,0 +1,56 @@
+- $pkHgt = 200
+- cpt = 0
+/ - $nbpk = [1,2,3] @see rubyLib.rb dyn add
+
+*$tab.c0 class="mobile_300"
+  - $nbpk.each{ |i|
+  / - i.odd? return true si i est impaire
+  - if i.odd?
+    tr
+      - if i % 2 == 1
+        td.mob_d_b.pdb12 valign="top"
+          *$tab.c0
+            tr
+              td.pdb16 align="center" valign="top" width="#{$column*6+$gutter*5}"
+                a href==("#{$link[1]}#{$ref[cpt]}.html#{$goTk[:p1]}#{$tkc[3]}_#{cpt+1}#{$campaign}") target="_blank"
+                  img.rz72 src==(($abspath == true ? $srcAbs : $srcRel)+"pk#{cpt+1}.jpg") height==$pkHgt alt=""
+            tr
+              td.pdr10.pdb8.pdl10 align="center" width="280"
+                p.lib
+                  a href==("#{$link[1]}#{$ref[cpt]}.html#{$goTk[:p1]}#{$tkc[4]}_#{cpt+1}#{$campaign}") target="_blank"
+                    | #{$putLib[cpt]}
+            tr
+              td align="center"
+                *$tab.c0
+                  tr
+                    td.price
+                      a href==("#{$link[1]}#{$ref[cpt]}.html#{$goTk[:p1]}#{$tkc[5]}_#{cpt+1}#{$campaign}") target="_blank"
+                        | #{$putPri[cpt]}
+        td.mob_d_none width="#{$gutter}"
+
+        / | #{cpt} |  && $ref.length <= $nbpk.length
+        -if $nbpk[i]
+          td.mob_d_b.pdb12 valign="top"
+            *$tab.c0
+              tr
+                td.pdb16 align="center" valign="top" width="#{$column*6+$gutter*5}"
+                  a href==("#{$link[1]}#{$ref[cpt+1]}.html#{$goTk[:p1]}#{$tkc[3]}_#{cpt+2}#{$campaign}") target="_blank"
+                    img.rz72 src==(($abspath == true ? $srcAbs : $srcRel)+"pk#{cpt+2}.jpg") height==$pkHgt alt=""
+              tr
+                td.pdr10.pdb8.pdl10 align="center" width="280"
+                  p.lib
+                    a href==("#{$link[1]}#{$ref[cpt+1]}.html#{$goTk[:p1]}#{$tkc[4]}_#{cpt+2}#{$campaign}") target="_blank"
+                      | #{$putLib[cpt+1]}
+              tr
+                td align="center"
+                  *$tab.c0
+                    tr
+                      td.price
+                        a href==("#{$link[1]}#{$ref[cpt+1]}.html#{$goTk[:p1]}#{$tkc[5]}_#{cpt+2}#{$campaign}") target="_blank"
+                          | #{$putPri[cpt+1]}
+    tr
+      td height="12"
+
+  - cpt += 1
+  - }
+

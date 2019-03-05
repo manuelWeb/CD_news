@@ -1,0 +1,20 @@
+/ mentions @see ../var/var_legal.slim
+tr
+  td width="620" valign="top" style="padding-top:3px; padding-bottom: 20px; "
+    p.lh-150 align="left" style="font-family:Verdana, Geneva, sans-serif;font-size:11px;color:#555555;margin:0;text-align:justify;"
+      -if $asterisque[:s1] != ''
+        == $asterisque[:s1]
+      -else
+        | &nbsp;
+    div style="text-align: center; "
+      font style="font-family:Verdana, Geneva, sans-serif;font-size:11px;color:#555555"
+        a> href==($cgv) style="color:#333333;" target="_blank"
+          strong
+            u Conditions Générales de vente
+        | | 
+        a> href==($contact) style="color: #333333; " target="_blank"
+          strong
+            u Contact
+        | | 
+        a href==($desabo) style="color: #333333; " target="_blank"
+          | Se désabonner

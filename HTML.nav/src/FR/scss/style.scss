@@ -1,0 +1,50 @@
+$vartxtcolor: #006737;
+$white: #FFFFFF;
+$varbgcolor: #FFFFFF;
+.ExternalClass * { line-height: 130%; }
+body {line-height: 121%; width: 100%; margin: 0; background-color: #FFFFFF;}
+td img{display: block; font-family: Arial, Helvetica, sans-serif;}
+.alt {font-size: 16px;}
+.alt-lh-norm {line-height: normal; font-size: 16px;}
+.va-m {vertical-align: middle;}
+td img.imginline{display: inherit;}
+p {margin: 0; padding: 0; border: none; line-height: normal; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; text-indent: 0;}
+.sva_num {margin: 0; padding: 0; color: #AF007D; font-weight: bold; }
+.sva_txt {line-height: 10px; font-size: 10px; color: #ffffff; }
+.sva-bd-left_1px_ccc { border-left: 1px solid #CCCCCC; }
+.num { padding: 0 3px; }
+.txt { padding: 0 3px; }
+.right-innerglow { border-right: 1px solid #CCCCCC; } 
+td {line-height: 1px; font-size: 1px;}
+td font, td span, td a{ line-height: normal;}
+td img {display: block; line-height: normal; }
+#legal {line-height: 130%; font-family: Verdana, Geneva, sans-serif; font-size: 11px; color: #555555; margin: 0; text-align: justify; }
+.headcolor {color: $vartxtcolor;}
+
+img {display: block; font-family: Arial, sans-serif; font-size: 16px;}
+table td {border-collapse: collapse;}
+td {line-height: 1px; font-size: 1px;}
+td font, td span{ line-height: normal;}
+td img {display: block; line-height: normal; }
+.w100 {width: 100%;}
+.bg-color {background-color: $varbgcolor;}
+.teaserText, .logo {font-family: Arial, sans-serif; font-weight: bold; font-size: 30px; text-align: center; line-height: 100%;}
+.logo {text-align: left; color: #E2144D;}
+.teaserText {font-size: 36px; line-height: 38px; color: $vartxtcolor; text-align: center;}
+.selBtn {font-size: 21px; line-height: 28px; color: $vartxtcolor; text-align: center;}
+.txtcenter {text-align: center;}
+.lh-100 {line-height: 100%;}
+.lh-130 {line-height: 130%;}
+.lh-150 {line-height: 150%;}
+.m0auto {margin: 0 auto;}
+.m0 {margin: 0;}
+.pt6 {padding-top: 6px;}
+.pt5 {padding-top: 5px;}
+.pb5 {padding-bottom: 5px;}
+.pt12 {padding-top: 12px;}
+.pr6 {padding-right: 6px;}
+.pr10 {padding-right: 10px;}
+.pb12 {padding-bottom: 12px;} .pb10 {padding-bottom: 10px;}
+.pl10 {padding-left: 10px;}
+
+.db {display: block;}

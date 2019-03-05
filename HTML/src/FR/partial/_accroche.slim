@@ -1,0 +1,52 @@
+*$tab.c0m320 class="m0auto" width="#{$objso["layout"]["totWidth"]}"
+  tr
+    td.mob_d_none width="#{$objso['layout']['bdr-l']}"
+
+    td valign="bottom"
+      *$tab.c0pd_r_l_4
+        tr
+          td.mob_d_b.pdt4.pdb12
+            *$tab.c0
+              tr
+                td.mob_nopd width="#{$column*7+$gutter*6}"
+                  *$tab.c0
+                    tr
+                      td.pdb16.lh32.ffRobLight.fz30.mobfs26.mob_tac.color-prim
+                        | Merci pour votre visite :)
+                        br
+                        | Votre panier vous attend !
+                    tr
+                      td.pdb16
+                        p.accTxt align="left"
+                          b
+                            | Bonjour &lt;Mme | Mr #Unnomsuperlong&gt;,
+                            br
+                            br
+                          | Vous avez récemment visité notre site et créé votre panier sur
+                          a href==("#{$url}#{$index}#{$goTk[:p1]}#{$tkc[12]}#{$campaign}") target="_blank"
+                            == $objso["url"]["fr"]
+                          br
+                          | <br />Celui-ci a été sauvegardé pour faciliter votre commande. Vous pouvez le consulter puis valider votre panier. Il reste accessible durant quelques jours seulement !
+                          br
+                          br
+                          | À tout de suite sur
+                          a href==("#{$url}#{$index}#{$goTk[:p1]}#{$tkc[12]}#{$campaign}") target="_blank"
+                            == $objso["url"]["fr"]
+                          |  !
+                    tr
+                      td.mob_tal align="center"
+                        *$tab.c0
+                          tr
+                            / btn bgcolor => source.json lay/color/prim
+                            td.pdl24.pdr24.bds-3.vam height="46" bgcolor="#{$primaryColor}"
+                              p
+                                a.cf.tdn.fz18 href==("#{$url}#{$vr.arg('brand','panier')}#{$goTk[:p1]}#{$tkc[2]}#{$campaign}") target="_blank"
+                                  | > Je retrouve mon panier !
+                td width="#{$objso['layout']['gutter']}"
+                td.mob_d_none.mob_nopd valign="bottom" width==($column*2+$gutter*1) align="left"
+                  a href==("#{$url}#{$vr.arg('brand','panier')}#{$goTk[:p1]}#{$tkc[2]}#{$campaign}") target="_blank"
+                    img src==(($abspath == true ? $srcAbs : $srcRel)+"s3c2_accVisu.jpg") width="252" alt=""
+
+    td.mob_d_none width="#{$objso['layout']['bdr-l']}"
+
+

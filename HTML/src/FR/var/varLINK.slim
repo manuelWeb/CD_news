@@ -1,0 +1,19 @@
+-$dt_campagneName = $dt + $vr.arg('campaignName')
+-$campaign        = "&utm_campaign=#{$dt_campagneName}"
+
+-$url = "http://#{$vr.arg('url','fr')}/fr/"
+
+// diff country for each var/varLINK.slim
+-$country = 'fr'
+
+/ liens produits fin url dyn
+-$link = ["0", "#{$url}x/x/x/"]
+
+/ index
+-$index    = "index.aspx"
+
+/ tracking google
+- $goTk = {###,
+  p1: "?utm_source=NL&utm_medium=email&utm_content=",
+  p2: "&utm_source=NL&utm_medium=email&utm_content=",
+}

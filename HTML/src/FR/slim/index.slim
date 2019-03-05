@@ -1,0 +1,101 @@
+== Slim::Template.new('src/var_global.slim').render
+== Slim::Template.new('src/dynamicTags.slim').render
+// attention _varLib.slim est gen dyn
+== Slim::Template.new('./src/FR/var/_varLib.slim').render
+== Slim::Template.new('./src/FR/var/varLINK.slim').render
+== Slim::Template.new('./src/FR/var/_var-layout.slim').render
+
+- $imgBGcondition = $abspath == true ? $srcAbs : $srcRel
+
+doctype transitional
+html
+  head
+    meta http-equiv="Content-Type" content="text/html;charset=UTF-8"
+    title ==($objso["brand"]["name"])
+    link rel="stylesheet" href="css/style.css" type="text/css"
+    link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet"
+    / link rel="stylesheet" href="scss/style.scss"
+    style data-premailer="ignore" type="text/css"
+      | @media only screen and (max-width: 480px),(max-device-width: 1024px) and (orientation : portrait) {
+        *[class=mob-only] { width: auto !important; height: auto !important; overflow: visible !important; display: block !important; }
+        *[class=emailMobileMaxWidth] { width: 100% !important; height: auto !important; max-width: 744px !important; }
+        *[class=emailMobileHide] { display: none !important; }
+        *[class*=emailMobileHide] { display: none !important; }
+        *[class=cent]{ width:100%!important; height:auto!important; }
+        *[class=rz72]{ width:72%!important; height:auto!important; }
+        *[class=centw]{ width:100%!important; }
+        .mob_320 { width: 320px !important; }
+        table.mobile_320 { margin: 0 auto !important; width: 320px !important; }
+        table.mobile_300 { margin: 0 auto !important; width: 300px !important; }
+        table.mob_318 { margin: 0 auto !important; width: 318px !important; }
+        table.mob_100pct, td.mob_100pct { width: 100% !important; }
+        img.mob_img_318 { margin: 0 auto; width: 318px !important; height: auto; }
+        img.mob_img_244 { margin: 0 auto; width: 244px !important; }
+        .mob_m0auto { margin: 0 auto !important; }
+        td.mob_bd_none_pr10 { padding-right: 10px !important; border: none !important; }
+        td.mob_nopd { padding: 0 !important; }
+        td.mob_nopdl { padding-left: 0 !important; }
+        td.mob_pdb_4 { padding-bottom: 4px !important; }
+        td.mob_pd_bd_none { padding: 0 !important; border: none !important; }
+        td.mob_pd_bd_none_w10 { width: 10px !important; padding: 0 !important; border: none !important; }
+        td.mob_pt_pb_10 { padding-top: 10px !important; padding-bottom: 10px !important; }
+        td.mob_pd_bd_none_pdt_pdb_5 { padding-right: 0 !important; padding-left: 0 !important; padding-top: 5px; padding-bottom: 5px; border: none !important; }
+        .mob_dib { display: inline-block !important; }
+        td.mob_db_logo { display: block !important; padding-top: 6px; padding-bottom: 10px; background-color: #E1E1E1; }
+        .mob_d_b { display: block !important; }
+        td.mob_d_b_pb10 { display: block !important; padding-bottom: 10px !important; }
+        td.mob_d_b_pb10_noBd { display: block !important; width: 320px !important; padding-bottom: 10px !important; border: none !important; }
+        td.desk_dn { display: table-cell !important; }
+        td.mob_d_none { display: none !important; }
+        td img.mob_img_320 { width: 320px !important; }
+        td.mob_24 { width: 24% !important; }
+        td.mob_25 { width: 25% !important; }
+        td.mob_32_4 { width: 32.4% !important; }
+        td.mob_33 { width: 33.333% !important; }
+        .mob_tac { text-align: center !important; }
+        .mob_tal { text-align: left !important; }
+        .mob_tar { text-align: right !important; }
+        img.mob_db_center { display: block !important; text-align: center !important; margin: 0 auto !important; }
+        .fs10 { font-size: 10px !important; }
+        .mobfs26 { font-size: 26px !important; }
+        .w3 { width: 3px; }
+        .bdr1 {border-right: 1px solid #ffffff}
+        .bdr2 {border-right: 2px solid #ffffff}
+        .bdb2 {border-bottom: 2px solid #ffffff}
+        }
+
+  // hack OUTLOOK font-face/font-stack error rendering
+  <!--[if mso]> <style type="text/css"> body, table, td {font-family: Arial, Helvetica, sans-serif !important;} </style> <![endif]-->
+
+  body bgcolor="#FFFFFF" vlink="#000000" link="#000000" style="margin: 0; padding: 0; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100%;"
+    / table.mobile_320 width="100%" border="0" cellpadding="0" cellspacing="0"
+    *$tab.c0fullw
+
+      /! Pre-Header txt + lien version en ligne
+      tr
+        td
+          == Slim::Template.new('./src/FR/partial/_header_doc.slim').render
+      /! Header Logo + mon cpt
+      tr
+        td valign="top"
+          == Slim::Template.new('./src/FR/partial/_headWrp.slim').render
+      /! Intro : Merci…Votre panier + paragraphe + btn + image
+      tr
+        td valign="top"
+          == Slim::Template.new('./src/FR/partial/_accroche.slim').render
+      /! Actuellement ds votre panier + produits
+      tr
+        td valign="top"
+          == Slim::Template.new('./src/FR/partial/_pkWrp.slim').render
+      /! Bouton > Je valide ce panier
+      tr
+        td valign="top"
+          == Slim::Template.new('./src/FR/partial/_btnValidePanier.slim').render
+      /! Footer éléments de réassurances
+      tr
+        td valign="top"
+          == Slim::Template.new('./src/FR/partial/_eltReassur.slim').render
+      /! mentions légales
+      tr
+        td
+          == Slim::Template.new('./src/FR/partial/_legal.slim').render

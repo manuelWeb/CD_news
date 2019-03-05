@@ -1,0 +1,42 @@
+-$date         = "0118"
+-$annee        = "2018"
+-campaignName  = "soldes"
+-campaignNameM = "Soldes"
+-$addLogo      = true
+
+-$campaign = "&utm_campaign=#{$date}_#{campaignName}"
+-$miror    = "#{campaignNameM}_#{$date}"
+/ lien header "version en ligne"
+-$link_header = "https://chienchatetcompagnie.com/NewsLettersCD/#{$miror}/index.htm"
+/ layout
+-$srcAbs  = "https://www.webdesignord.fr/domoti/CD/images/"
+-$srcRel  = "images/"
+
+-$white      = "#FFFFFF"
+-$varbgcolor = $white
+/ ID rayon
+- $IDray = { # ...,
+  fr: "795",
+  bf: "1527",
+  bv: "1531",
+  nl: "1526",
+  de: "1530",
+  uk: "1529"}
+
+/ remplir si mention supplementaire
+- $legalplus = { # ...,
+  bf: "",
+  bv: "",
+  de: "",
+  fr: "* Offre valable du mercredi 10 janvier au mardi 20 février 2018 dans la limite des stocks disponibles sur une sélection d'articles.",
+  nl: "",
+  uk: ""}
+
+/ LAYOUT
+- $shadLR_H = 1058
+
+/ code KDO footer
+- $code = "XXXX"
+
+/ layout
+- $tabborder0 = '0" cellpadding="0" cellspacing="0'

@@ -1,0 +1,80 @@
+/ Ruby dynamic tag and attribut
+ruby:
+  class Vrb
+    def initialize(*arg)
+      @arg = arg
+    end
+    # Renvoie interpolation var ruby #{}
+    def arg(*arg)
+      # "#{arg1}#{arg2}"
+      if arg.count == 1
+        $objso["#{arg[0]}"]
+      elsif arg.count == 2
+        $objso["#{arg[0]}"]["#{arg[1]}"]
+      end
+    end
+  end
+
+- $vr = Vrb.new
+- $dt = $vr.arg('date')
+- $tkc = $vr.arg('track','content')
+
+
+ruby:
+  class Tag
+    def initialize(tag)
+      @tag = tag
+    end
+    # return table bd:0 cp+cs:0 a:c
+    def c0
+      @table = {tag: @tag, border: '0', cellpadding: '0', cellspacing: '0', align: 'center'}
+    end
+    # return table bd:0 cp+cs:0 a:c
+    def c0pd_r_l_4
+      @table = {tag: @tag, border: '0', cellpadding: '0', cellspacing: '0', align: 'center', class: 'pdr4 pdl4'}
+    end
+    # return table bd:0 cp+cs:0 a:c
+    def c0fullw
+      @table = {tag: @tag, border: '0', cellpadding: '0', cellspacing: '0', align: 'center', width: '100%', class: 'mobile_320'}
+    end
+    # return table bd:0 cp+cs:0 a:c
+    def c0m320
+      @table = {tag: @tag, border: '0', cellpadding: '0', cellspacing: '0', align: 'center', class: 'mobile_320'}
+    end
+    # return td align:right
+    def ar
+      @td = {tag: @tag, align: 'right'}
+    end
+    # return td valign:top
+    def vatop
+      @td = {tag: @tag, valign: 'top'}
+    end
+    # return td valign:[middle,center]
+    def vhamidd
+      @td = {tag: @tag, valign: 'middle', align: 'center'}
+    end
+    # return td align:center
+    def acenter
+      @td = {tag: @tag, align: 'center'}
+    end
+    # return td align:center + .padding-r+l:4px
+    def pdrl4
+      @td = {tag: @tag, align: 'center', class: 'pdr4 pdl4'}
+    end
+  end
+
+  class Lk
+    attr_accessor :tag, :classNamme
+    def initialize(tag)
+      @tag = ""
+    end
+    # return a target="_blank"
+    def blk(*className)
+      @tag = {tag: @tag, target: "_blank", class: @className}
+    end
+  end
+
+- $tab = Tag.new("table")
+- $td  = Tag.new("td")
+- $a   = Lk.new("a")
+- $a   = $a.blk
