@@ -17,9 +17,10 @@ tr
                 tr
                   - for i in 0..2
                     - if i < 1
-                      td.mob_d_none width="4" bgcolor="red"
+                      / td.mob_d_none width="4" bgcolor="red"
+                      td.mob_d_none width="4" bgcolor=""
                     - if i >= 1
-                      td width="5" bgcolor="blue"
+                      td width="5" bgcolor=""
                     td.nav.tac.cel-hov.bdrs-20 align="center" valign="middle" bgcolor="#{$bgNav[i]}" height="40"
                       a.univ.tdn.tdn-hov.bdrs-20 href="" target="_blank"
                         == univ[i]
@@ -31,13 +32,14 @@ tr
                 tr
                   - for i in 3..4
                     - if i < 1
-                      td.mob_d_none width="4" bgcolor="red"
+                      / td.mob_d_none width="4" bgcolor="red"
+                      td.mob_d_none width="4" bgcolor=""
                     - if i >= 1
-                      == i < 4 ? '<td width="5" bgcolor="darkblue" class="mob_d_none"></td>' : '<td width="5" bgcolor="blue"></td>'
-                      / :i == 1 ? td width="5" bgcolor="darkblue" : td width="5" bgcolor="blue"
+                      == i < 4 ? '<td width="5" bgcolor="" class="mob_d_none"></td>' : '<td width="5" bgcolor=""></td>'
                     td.nav.tac.cel-hov.bdrs-20 align="center" valign="middle" bgcolor="#{$bgNav[i]}" height="40"
                       a.univ.tdn.tdn-hov.bdrs-20 href="" target="_blank"
                         == univ[i]
                         / == univ[i] + " i:" + i.to_s
                   - if i == 4
-                    td.mob_d_none width="4" bgcolor="red"
+                    / td.mob_d_none width="4" bgcolor="red"
+                    td.mob_d_none width="4" bgcolor=""
