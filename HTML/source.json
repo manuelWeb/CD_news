@@ -32,7 +32,7 @@
   "brand": {
     "name"    : "CHIEN, CHAT ET COMPAGNIE",
     "leg_name": "SWI SAS",
-    "url"     : "https://latelierdelucie.com",
+    "url"     : "https://www.chienchatetcompagnie.com",
     "miror"   : "Newsletters/miroir/Relance_panier_",
     "cpt"     : "compte_client/compte-perso.aspx",
     "panier"  : "commande/panier.aspx",
@@ -41,7 +41,7 @@
     "desabo"  : "animation/DesinscriptionNewsletter.aspx"
   },
   "nav": {
-    "link": ["broderie-canevas-point-noue", "loisirs-creatifs", "tricot-crochet", "couture-mercerie", "arts-graphiques", "puzzles"],
+    "link": ["hygiene-soin", "promenade-vetements-paniers", "jeux-loisirs", "astuces-gourmandises", "maison-deco-jardin"],
     "txt": ["Hygiène &<br /> soin", "Promenade &<br /> vêtements", "Jeux &<br /> loisirs", "Astuces &<br /> gourmandises", "Maison &<br /> jardin"],
     "txt_": ["Hygiène & soin", "Promenade & vêtements", "Jeux & loisirs", "Astuces & gourmandises", "Maison & jardin"]
   },
@@ -75,7 +75,7 @@
     "bf": "no-def",
     "bv": "no-def",
     "de": "no-def",
-    "fr": "www.latelierdelucie.fr",
+    "fr": "www.chienchatetcompagnie.com",
     "nl": "no-def",
     "uk": "no-def"
   },
