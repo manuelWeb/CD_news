@@ -2,14 +2,12 @@ tr
   td.mob_d_b.pdb16 valign="middle"
     *$tab.c0fullw
       tr
-        / desk device : padding-left: 4 column + 4 gutter
-        / (208 pad + 196 logo = )
-        td.mob_nopd.mob_d_b.mob_320 align="right" width="#{($column*9+$gutter*9)-48}" style="padding-right: 48px;"
-          a.mob_d_b href==("#{$url}#{$index}#{$goTk[:p1]}#{$tkc[0]}#{$campaign}") target="_blank"
-            // soit on passe l'image mobile en dib ou alors m0auto
-            img.mob_m0auto src==(($abspath == true ? $srcAbs : $srcRel)+"s1c1_logo.png") width="224" alt=""
+        / (TD width: 468(9col+9gut) - 47 padding = 421 )
+        td.mob_nopd.mob_d_b.mob_320 align="right" width="#{($column*9+$gutter*9)-47}" style="padding-right: 47px;"
+          a.mob_d_b href==( $url + $index + $goTk[:p1] + $tkc[0] + $campaign ) target="_blank"
+            img.mob_m0auto src==(($abspath == true ? $srcAbs : $srcRel)+"s1c1_logo.png") width="226" alt=""
 
-        / desk device : ( 116 pad + 92 cpt = 208)
-        td.mob_nopd.mob_d_b.mob_320.mob_tar width==($column*3+$gutter*2) align="left"
-          a href==("#{$url}#{$vr.arg('brand','cpt') }#{$goTk[:p1]}#{$tkc[1]}#{$campaign}") target="_blank"
+        / desk device : @see sketch slice (padding-top)
+        td.mob_nopd.mob_d_b.mob_320.mob_tar width==($column*3+$gutter*2) align="center" style="padding-top: 18px;"
+          a href==( $url + $vr.arg('brand','cpt') + $goTk[:p1] + $tkc[1] + $campaign ) target="_blank"
            img.mob_dib src==(($abspath == true ? $srcAbs : $srcRel)+"s1c2_cpt.png") width="93" alt=""
