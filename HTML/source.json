@@ -57,6 +57,7 @@
       "primary"  : "#006737",
       "secondary": "#8AC43F",
       "tertiary" : "#EF5927",
+      "six"      : "#FAF2E7",
       "nav": ["#0D7AC4", "#E94E39", "#8B61B0", "#F26700", "#719835"]
     },
     "totWidth": 636,
@@ -69,7 +70,7 @@
     "topShad" : false,
     "shadLR"  : false,
     "shadLR_H": "1140",
-    "abspath" : false
+    "abspath" : true
   },
   "url": {
     "bf": "no-def",

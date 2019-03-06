@@ -1,5 +1,5 @@
 @charset "utf-8";
-$primary: #006737; $secondary: #8AC43F; $tertiary: #EF5927;
+$primary: #006737; $secondary: #8AC43F; $tertiary: #EF5927; $txtRassur: #653505;
 $ff1: Verdana, 'Geneva', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 $ff1_1: 'Roboto', Arial, 'Helvetica Neue', sans-serif;
 $ff1_2: Arial, 'Helvetica Neue', Helvetica, sans-serif;
@@ -274,7 +274,7 @@ td {
     font-size: 16px;
     font-weight: 100;
     a {
-      color: #ffffff;
+      color: $txtRassur;
     }
     .small {
       font-size: 10px;

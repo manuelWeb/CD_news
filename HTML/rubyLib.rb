@@ -3,11 +3,13 @@ require "nokogiri"
 require "open-uri"
 require "net/https"
 require "mini_magick"
-url  = "https://www.latelierdelucie.fr/fr/"
+- brand = "www.chienchatetcompagnie.com"
+
+url  = "https://#{brand}/fr/"
 path = "xxx/xxx/xxx/"
 ext  = ".html"
 #, "2205110", "3718319"
-ref = [ "2621191", "4231494", "2946192" , "2873198", "2479194"]
+ref = [ "2907178", "1135177", "2867174" , "1169176", "2642171"]
 
 aryUrl = Array.new
 aryLib = Array.new
@@ -107,7 +109,7 @@ ref.each {|i|
   File.open("src/FR/images/pk#{cpti}.jpg", "wb") do |saved_file|
     print "open ?:pk#{cpti}!!!!!!!!!!!!! "
     # the following "open" is provided by open-uri
-    open("https://www.latelierdelucie.fr/Visuels/Produits/zoom/#{i}_WEB1.jpg", "rb") do |read_file|
+    open("https://#{brand}/Visuels/Produits/zoom/#{i}_WEB1.jpg", "rb") do |read_file|
       print "saved_file:#{i}_WEB1.jpg!!!!!!!!!!!!! "
       saved_file.write(read_file.read)
     end
