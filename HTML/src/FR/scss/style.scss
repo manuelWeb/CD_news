@@ -201,7 +201,7 @@ td {
   @extend .vam;
   padding-right: 8px;
   padding-left: 8px;
-  white-space: nowrap;
+  // white-space: nowrap; // règle si item &::<br />bla…
   line-height: normal;
   font-size: 16px;
   font-weight: normal;
