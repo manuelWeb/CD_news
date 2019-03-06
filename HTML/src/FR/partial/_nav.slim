@@ -13,8 +13,6 @@ tr
               *$tab.c0 width="100%"
                 tr
                   - for i in 0..2
-                    - if i < 1
-                      td.mob_d_none width==($gutter/2) bgcolor==(margeColor[0])
                     - if i >= 1
                       td width==($gutter) bgcolor==(margeColor[1])
                     / item 1 to 3
@@ -36,7 +34,5 @@ tr
                     td.nav.tac.cel-hov.bdrs-20 align="center" valign="middle" bgcolor="#{$bgNav[i]}" height="40"
                       a.univ.tdn.tdn-hov.bdrs-20 href="" target="_blank"
                         == univ[i]
-                  - if i == 4
-                    td.mob_d_none width==($gutter/2) bgcolor==(margeColor[0])
                 tr
                   td height==($gutter)
