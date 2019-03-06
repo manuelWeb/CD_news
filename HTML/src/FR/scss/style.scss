@@ -199,8 +199,9 @@ td {
 // navigation &:hover
 .nav {
   @extend .vam;
-  padding-right: 11px;
-  padding-left: 11px;
+  padding-right: 8px;
+  padding-left: 8px;
+  white-space: nowrap;
   line-height: normal;
   font-size: 16px;
   font-weight: normal;

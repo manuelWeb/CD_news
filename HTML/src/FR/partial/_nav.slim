@@ -1,11 +1,8 @@
--univ = $objso["nav"]["txt"];univItem = $objso["nav"]["link"]
-// origine
--univ = ["Hygiène & soin", "Promenade, vêtements & paniers", "Jeux & loisirs", "Astuces & gourmandises", "Maison, déco & jardin"]
-// cut
--univ = ["Hygiène & soin", "Promenade & vêtements ", "Jeux & loisirs", "Astuces & gourmandises", "Maison & jardin"]
-// link
--univItem = ["hygiene-soin", "promenade-vetements-paniers", "jeux-loisirs", "astuces-gourmandises", "maison-deco-jardin"]
--$bgNav = ["#3479BE","#D95943","#8564AB","#E36F26","#799644"]
+-univ = $vr.arg('nav','txt'); univItem = $vr.arg('nav','link');
+- $bgNav = $vr.arg('layout', 'color', 'nav')
+- marg_highlight = true;
+- marg_highlight ? margeColor = ["red", "gray", "blue", "green", "deeppink"] : margeColor = ""
+
 tr
   td
     *$tab.c0fullw
@@ -13,33 +10,33 @@ tr
         - for j in 0..1
           - if j == 0
             td.mob_d_b valign="middle"
-              *$tab.c0
+              *$tab.c0 width="100%"
                 tr
                   - for i in 0..2
                     - if i < 1
-                      / td.mob_d_none width="4" bgcolor="red"
-                      td.mob_d_none width="4" bgcolor=""
+                      td.mob_d_none width==($gutter/2) bgcolor==(margeColor[0])
                     - if i >= 1
-                      td width="5" bgcolor=""
+                      td width==($gutter) bgcolor==(margeColor[1])
+                    / item 1 to 3
                     td.nav.tac.cel-hov.bdrs-20 align="center" valign="middle" bgcolor="#{$bgNav[i]}" height="40"
                       a.univ.tdn.tdn-hov.bdrs-20 href="" target="_blank"
                         == univ[i]
                 tr
-                  td height="4"
+                  td height==($gutter)
           - if j == 1
             td.mob_d_b valign="middle"
-              *$tab.c0
+              *$tab.c0 width="100%"
                 tr
                   - for i in 3..4
-                    - if i < 1
-                      / td.mob_d_none width="4" bgcolor="red"
-                      td.mob_d_none width="4" bgcolor=""
-                    - if i >= 1
-                      == i < 4 ? '<td width="5" bgcolor="" class="mob_d_none"></td>' : '<td width="5" bgcolor=""></td>'
+                    - if i >= 1 && i < 4
+                      td.mob_d_none width==($gutter) bgcolor==(margeColor[3])
+                    -else
+                      td width==($gutter) bgcolor==(margeColor[4])
+                    / item 3 to 4
                     td.nav.tac.cel-hov.bdrs-20 align="center" valign="middle" bgcolor="#{$bgNav[i]}" height="40"
                       a.univ.tdn.tdn-hov.bdrs-20 href="" target="_blank"
                         == univ[i]
-                        / == univ[i] + " i:" + i.to_s
                   - if i == 4
-                    / td.mob_d_none width="4" bgcolor="red"
-                    td.mob_d_none width="4" bgcolor=""
+                    td.mob_d_none width==($gutter/2) bgcolor==(margeColor[0])
+                tr
+                  td height==($gutter)

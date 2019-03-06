@@ -11,6 +11,8 @@ ruby:
         $objso["#{arg[0]}"]
       elsif arg.count == 2
         $objso["#{arg[0]}"]["#{arg[1]}"]
+      elsif arg.count == 3
+        $objso["#{arg[0]}"]["#{arg[1]}"]["#{arg[2]}"]
       end
     end
   end

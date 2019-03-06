@@ -42,7 +42,8 @@
   },
   "nav": {
     "link": ["broderie-canevas-point-noue", "loisirs-creatifs", "tricot-crochet", "couture-mercerie", "arts-graphiques", "puzzles"],
-    "txt": ["Hygiène & soin", "Promenade & vêtements", "Jeux & loisirs", "Astuces & gourmandises", "Maison & jardin"]
+    "txt": ["Hygiène &<br /> soin", "Promenade &<br /> vêtements", "Jeux &<br /> loisirs", "Astuces &<br /> gourmandises", "Maison &<br /> jardin"],
+    "txt_": ["Hygiène & soin", "Promenade & vêtements", "Jeux & loisirs", "Astuces & gourmandises", "Maison & jardin"]
   },
   "track": {
     "content": ["logo", "compte", "btn_retrouver", "visuel", "accroche", "prix", "btn_valider", "garantie", "livraison", "paiement", "garantie", "rgpd", "cgv", "contact", "desabo", "URL"]
@@ -56,13 +57,7 @@
       "primary"  : "#71439A",
       "secondary": "",
       "tertiary" : "",
-      "nav": {
-        "item1": "#0D7AC4",
-        "item2": "#E94E39",
-        "item3": "#8B61B0",
-        "item4": "#F26700",
-        "item5": "#719835"
-      }
+      "nav": ["#0D7AC4", "#E94E39", "#8B61B0", "#F26700", "#719835"]
     },
     "totWidth": 636,
     "column"  : 44,
