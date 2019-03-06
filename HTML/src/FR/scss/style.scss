@@ -1,10 +1,11 @@
 @charset "utf-8";
-$primary: #71439a;
+$primary: #006737; $secondary: #8AC43F; $tertiary: #EF5927;
 $ff1: Verdana, 'Geneva', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 $ff1_1: 'Roboto', Arial, 'Helvetica Neue', sans-serif;
 $ff1_2: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 $ff2: Georgia, 'Times New Roman', Times, serif;
-
+$priceBgc: transparent;
+$price_pad: false;
 // magic mixin for padding
 @mixin pdt($val) {
   padding-top: $val + px;
@@ -226,8 +227,10 @@ td {
 .fz30 {
   font-size: 30px;
 }
-.color-prim {
-  color: #c70082;
+.color {
+  &-prim {color: $primary;}
+  &-sec  {color: $secondary;}
+  &-ter  {color: $tertiary;}
 }
 .accTxt {
   line-height: 20px;
@@ -249,13 +252,15 @@ td {
   }
 }
 .price {
-  padding: 6px 12px;
+  @if $price_pad {
+    padding: 6px 12px;
+  }
   font-size: 21px;
   font-weight: bold;
   font-family: $ff1_2;
   color: $primary;
   border-radius: 6px;
-  background-color: #fbb600;
+  background-color: $priceBgc;
   a {
     color: $primary;
     text-decoration: none;
