@@ -1,3 +1,18 @@
+// exec rubyLib.rb
+var exec = require('child_process').exec
+console.log('Ruby is run ;)!!!')
+exec('ruby rubyLib.rb', function(error, stdout, stderr) {
+  if (stdout) {
+    console.log('RUBY: ' + stdout)
+    // une fois les Lib + price recup on lance le CB
+    cb()
+  } else if (stderr) {
+    console.log('stderr: ' + stderr)
+  } else if (error) {
+    console.log('error: ' + error)
+  }
+})
+
 require('./tasks/img.js')()
 require('./tasks/slim.js')()
 require('./tasks/sass.js')() // lire note dependance sass.js
@@ -57,20 +72,6 @@ gulp.task('dev', function(cb) {
       })
     })
   })
-})
-// exec rubyLib.rb
-var exec = require('child_process').exec
-console.log('Ruby is run ;)!!!')
-exec('ruby rubyLib.rb', function(error, stdout, stderr) {
-  if (stdout) {
-    console.log('RUBY: ' + stdout)
-    // une fois les Lib + price recup on lance le CB
-    cb()
-  } else if (stderr) {
-    console.log('stderr: ' + stderr)
-  } else if (error) {
-    console.log('error: ' + error)
-  }
 })
 
 // src & output
