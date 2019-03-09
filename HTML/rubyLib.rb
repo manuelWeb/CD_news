@@ -129,11 +129,6 @@ ref.each {|i|
   # # image.crop "300x196+0+0"
   # # image.colorspace "Gray"
   # image.write "#{image.path}"
-  # image.combine_options do |b|
-  #   b.resize "300x196>"
-  #   b.quality "100" # 86 = q:79 fw info
-  #   # b.depth "7"
-  #   # b.blur "0x15"
   # end
 
   image.combine_options do |b|

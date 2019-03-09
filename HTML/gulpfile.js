@@ -1,6 +1,7 @@
 // exec rubyLib.rb
 var exec = require('child_process').exec
-console.log('Ruby is run ;)!!!')
+console.log('Ruby is running ;)!!!')
+
 exec('ruby rubyLib.rb', function(error, stdout, stderr) {
   if (stdout) {
     console.log('RUBY: ' + stdout)
@@ -45,28 +46,34 @@ var gulp         = require('gulp'),
 
 const notifier = require('node-notifier')
 
-const monObj = { maClef1: 'hello', maClef2: 'hello', maClef3: 'hello' }
-
 function cb() {
   console.log('ruby code is Okay guy!')
   gulp.start('dev1')
 }
 
 gulp.task('dev', function(cb) {
+  gulp.start('destroy')
+})
+function monCB() {
+  console.log('on peut y aller ??????????')
+}
+function showDestry(img, monCB) {
+  console.log(`images ${img[0]} are destroyed!`)
+}
+// destroy task when finsih call dev1
+gulp.task('destroy', function() {
   rimraf('./src/FR/var/_varLib.slim', function cb() {
     console.log('_varLib.slim file have been destroyed!')
 
     rimraf('render', function cb() {
       console.log('render folder have been destroyed!')
-      // pk1.jpg pk1_visuel.jpg
-      var del = new RegExp('pk..jpg', 'i')
 
       fs.readdir('./src/FR/images/', (err, files) => {
         for (var i = 0, len = files.length; i < len; i++) {
           var match = files[i].match(/pk.\.jpg/)
           if (match !== null) {
             rimraf('./src/FR/images/' + match[0], function cb() {})
-            console.log(`images ${match[0]} are destroyed!`)
+            showDestry(match)
           }
         }
       })
