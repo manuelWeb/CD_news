@@ -5,7 +5,7 @@ require "net/https"
 require "mini_magick"
 require "json"
 
-- brand = "www.chienchatetcompagnie.com"
+brand = "www.chienchatetcompagnie.com"
 
 url  = "https://#{brand}/fr/"
 path = "xxx/xxx/xxx/"
@@ -14,11 +14,7 @@ ext  = ".html"
 # include "json"
 file = File.read("source.json")
 data = JSON.parse(file)
-
-puts data
-# puts data["refPk"]
-
-ref = [ "2907178", "1135177", "2867174" , "1169176", "2642171"]
+ref = data["refPk"]
 
 aryUrl = Array.new
 aryLib = Array.new
