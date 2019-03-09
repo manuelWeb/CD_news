@@ -54,11 +54,12 @@ function cb() {
 gulp.task('dev', function(cb) {
   gulp.start('destroy')
 })
-function monCB() {
-  console.log('on peut y aller ??????????')
+
+function callback(img) {
+  console.log(`img:${img} est detruite…`)
 }
-function showDestry(img, monCB) {
-  console.log(`images ${img[0]} are destroyed!`)
+function showDestroy(img, callback) {
+  callback(img)
 }
 // destroy task when finsih call dev1
 gulp.task('destroy', function() {
@@ -69,13 +70,34 @@ gulp.task('destroy', function() {
       console.log('render folder have been destroyed!')
 
       fs.readdir('./src/FR/images/', (err, files) => {
-        for (var i = 0, len = files.length; i < len; i++) {
-          var match = files[i].match(/pk.\.jpg/)
-          if (match !== null) {
-            rimraf('./src/FR/images/' + match[0], function cb() {})
-            showDestry(match)
-          }
+        let pki = files
+          .filter(function(name) {
+            if (!name.match(/pk.\.jpg/)) {
+              return false
+            } else {
+              return true
+            }
+          })
+          .map(i => i)
+        console.log(`PK:::::${pki}`)
+        // pki.map(i => rimraf('./src/FR/images/' + i), function cb() {})
+        for (var i = 0, len = pki.length; i < len; i++) {
+          rimraf('./src/FR/images/' + pki[i], function cb() {})
+          showDestroy(pki[i], callback)
         }
+
+        // for (var i = 0, len = pk.length; i < len; i++) {
+        //   // var match = files[i].match(/pk.\.jpg/)
+        //   var match = pk[i]
+        //   console.log(match)
+        //   // if (match !== null) {
+        //   //   rimraf('./src/FR/images/' + match[0], function cb() {})
+        //   //   showDestroy(match, callback)
+        //   // }
+        //   // if (match && i <= len - 1) {
+        //   //   console.log(`match: ${match}; i: ${i}; len: ${len} `)
+        //   // }
+        // }
       })
     })
   })
