@@ -30,47 +30,93 @@
     "lk": "achat_confiance/conditions-generales-de-vente.aspx"
   },
   "brand": {
-    "name"    : "CHIEN, CHAT ET COMPAGNIE",
+    "name": "CHIEN, CHAT ET COMPAGNIE",
     "leg_name": "SWI SAS",
-    "url"     : "https://www.chienchatetcompagnie.com",
-    "miror"   : "Newsletters/miroir/Relance_panier_",
-    "cpt"     : "compte_client/compte-perso.aspx",
-    "panier"  : "commande/panier.aspx",
-    "assur"   : ["achat_confiance/", "garanties.aspx", "informations-livraison.aspx", "paiement-securise.aspx", "garanties.aspx"],
-    "contact" : "lucie_et_vous/contact.aspx?val=A",
-    "desabo"  : "animation/DesinscriptionNewsletter.aspx"
+    "url": "https://www.chienchatetcompagnie.com",
+    "miror": "Newsletters/miroir/Relance_panier_",
+    "cpt": "compte_client/compte-perso.aspx",
+    "panier": "commande/panier.aspx",
+    "assur": [
+      "achat_confiance/",
+      "garanties.aspx",
+      "informations-livraison.aspx",
+      "paiement-securise.aspx",
+      "garanties.aspx"
+    ],
+    "contact": "lucie_et_vous/contact.aspx?val=A",
+    "desabo": "animation/DesinscriptionNewsletter.aspx"
   },
   "nav": {
-    "link": ["hygiene-soin", "promenade-vetements-paniers", "jeux-loisirs", "astuces-gourmandises", "maison-deco-jardin"],
-    "txt": ["Hygiène &<br /> soin", "Promenade &<br /> vêtements", "Jeux &<br /> loisirs", "Astuces &<br /> gourmandises", "Maison &<br /> jardin"],
-    "txt_": ["Hygiène & soin", "Promenade & vêtements", "Jeux & loisirs", "Astuces & gourmandises", "Maison & jardin"]
+    "link": [
+      "hygiene-soin",
+      "promenade-vetements-paniers",
+      "jeux-loisirs",
+      "astuces-gourmandises",
+      "maison-deco-jardin"
+    ],
+    "txt": [
+      "Hygiène &<br /> soin",
+      "Promenade &<br /> vêtements",
+      "Jeux &<br /> loisirs",
+      "Astuces &<br /> gourmandises",
+      "Maison &<br /> jardin"
+    ],
+    "txt_": [
+      "Hygiène & soin",
+      "Promenade & vêtements",
+      "Jeux & loisirs",
+      "Astuces & gourmandises",
+      "Maison & jardin"
+    ]
   },
   "track": {
-    "content": ["logo", "compte", "btn_retrouver", "visuel", "accroche", "prix", "btn_valider", "garantie", "livraison", "paiement", "garantie", "rgpd", "cgv", "contact", "desabo", "URL"]
+    "content": [
+      "logo",
+      "compte",
+      "btn_retrouver",
+      "visuel",
+      "accroche",
+      "prix",
+      "btn_valider",
+      "garantie",
+      "livraison",
+      "paiement",
+      "garantie",
+      "rgpd",
+      "cgv",
+      "contact",
+      "desabo",
+      "URL"
+    ]
   },
+  "refPk": ["2907178", "1135177", "2867174", "1169176", "2642171"],
   "ID": {
-    "bf": "1762", "bv": "1766", "de": "1765",
-    "fr": "1769", "nl": "1761", "uk": "1764"
+    "bf": "1762",
+    "bv": "1766",
+    "de": "1765",
+    "fr": "1769",
+    "nl": "1761",
+    "uk": "1764"
   },
   "layout": {
     "color": {
-      "primary"  : "#006737",
+      "primary": "#006737",
       "secondary": "#8AC43F",
-      "tertiary" : "#EF5927",
-      "six"      : "#FAF2E7",
+      "tertiary": "#EF5927",
+      "six": "#FAF2E7",
       "nav": ["#0D7AC4", "#E94E39", "#8B61B0", "#F26700", "#719835"]
     },
     "totWidth": 636,
-    "column"  : 44,
-    "gutter"  : 8,
-    "mr-l"    : 4,
-    "bdr-l"   : 6,
-    "addLogo" : true,
+    "column": 44,
+    "gutter": 8,
+    "mr-l": 4,
+    "bdr-l": 6,
+    "addLogo": true,
     "addPromo": false,
-    "topShad" : false,
-    "shadLR"  : false,
+    "topShad": false,
+    "shadLR": false,
     "shadLR_H": "1140",
-    "abspath" : true
+    "abspath": true
   },
   "url": {
     "bf": "no-def",
@@ -84,7 +130,7 @@
   "_comment": "",
   "gift": {
     "code": "XXXX",
-    "alt" : ["", ""]
+    "alt": ["", ""]
   },
   "prix": "..."
 }

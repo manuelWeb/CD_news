@@ -3,12 +3,21 @@ require "nokogiri"
 require "open-uri"
 require "net/https"
 require "mini_magick"
+require "json"
+
 - brand = "www.chienchatetcompagnie.com"
 
 url  = "https://#{brand}/fr/"
 path = "xxx/xxx/xxx/"
 ext  = ".html"
-#, "2205110", "3718319"
+# recup des pk ref depuis source.json
+# include "json"
+file = File.read("source.json")
+data = JSON.parse(file)
+
+puts data
+# puts data["refPk"]
+
 ref = [ "2907178", "1135177", "2867174" , "1169176", "2642171"]
 
 aryUrl = Array.new
