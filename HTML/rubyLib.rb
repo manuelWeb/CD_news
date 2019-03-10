@@ -112,10 +112,10 @@ ref.each {|i|
   puts "########### i_OnTop:#{i} ##################"
   # get online image to save on src/FR/images
   File.open("src/FR/images/pk#{cpti}.jpg", "wb") do |saved_file|
-    print "open ?:pk#{cpti}!!!!!!!!!!!!! "
+    # print "open ?:pk#{cpti}!!!!!!!!!!!!! "
     # the following "open" is provided by open-uri
     open("https://#{brand}/Visuels/Produits/zoom/#{i}_WEB1.jpg", "rb") do |read_file|
-      print "saved_file:#{i}_WEB1.jpg!!!!!!!!!!!!! "
+      # print "saved_file:#{i}_WEB1.jpg!!!!!!!!!!!!! "
       saved_file.write(read_file.read)
     end
   end
