@@ -30,7 +30,7 @@ var global_end = ''
 // prettier-ignore
 var gulp         = require('gulp'),
     bs           = require('browser-sync'),
-    slim         = require('gulp-slim'),
+    // slim         = require('gulp-slim'),
     sass         = require('gulp-sass'),
     plumber      = require('gulp-plumber'),
     premailer    = require('gulp-premailer'),
@@ -111,27 +111,24 @@ gulp.task('bs', function() {
   })
 })
 
-const jsonOrigin = jsonObj.refPk
 
-function retNewJson() {
-  let jsonChg = require('./source.json')
-  return jsonChg
-}
+const aryPk = require('./module.js')
+console.log(`aryPk.json_:::${aryPk.json_} `);
+console.log(aryPk.aryPkRead());
+
 const reportChange = (event, ref) => {
   console.log(
     '\x1b[30m\x1b[43m%s\x1b[0m',
     `File: ${event.path}, type was ${event.type}, running tasks...`
   )
-  console.log(jsonOrigin, retNewJson())
 }
 
 gulp.task('dev1', ['img', 'slim'], function() {
   gulp.start('build')
 })
 
-gulp.task('build', ['bs'], function() {
-  // console.log(jsonOrigin === jsonObj.refPk)
-  // console.log(jsonObj.refPk)
+// gulp.task('build', ['bs'], function() {
+gulp.task('build', function() {
   gulp
     .watch(
       ['source.json', src + '**/**/*.slim', src + '**/scss/*.scss'],
