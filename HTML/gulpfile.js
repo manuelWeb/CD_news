@@ -113,7 +113,7 @@ gulp.task('bs', function() {
 
 
 const mod_pk = require('./module.js');
-console.log(`mod_pk.aryPkRead() : ${mod_pk.aryPkRead()} `);
+// console.log(`mod_pk.aryPkRead() : ${mod_pk.aryPkRead()} `);
 // console.log(`mod_pk.json_:::${mod_pk.json_} `);
 // console.log(mod_pk.aryPkRead());
 
