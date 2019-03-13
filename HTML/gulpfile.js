@@ -112,9 +112,10 @@ gulp.task('bs', function() {
 })
 
 
-const aryPk = require('./module.js')
-console.log(`aryPk.json_:::${aryPk.json_} `);
-console.log(aryPk.aryPkRead());
+const mod_pk = require('./module.js');
+console.log(`mod_pk.aryPkRead() : ${mod_pk.aryPkRead()} `);
+// console.log(`mod_pk.json_:::${mod_pk.json_} `);
+// console.log(mod_pk.aryPkRead());
 
 const reportChange = (event, ref) => {
   console.log(

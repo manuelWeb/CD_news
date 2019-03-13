@@ -1,17 +1,30 @@
 const fs = require('fs');
 
-const jsonPk_ = require('./source.json');
+// const loadJSON = (filepath) => {
+//   return new Promise((resolve, reject) => {
+//     fs.readFile(filepath, 'utf8', (err, content) => {
+//       if(err) {
+//         reject(err)
+//       } else {
+//         try {
+//           resolve(
+//             JSON.parse(content)
+//             );
+//         } catch(err) {
+//           reject(err)
+//         }
+//       }
+//     })
+//   });
+// }
+
+// module.exports.aryPkRead = loadJSON('./source.json')
+// .then(console.log)
+// .catch(console.log);
 
 module.exports.aryPkRead = (limit=100) => {
   fs.readFile('./source.json', (err,content) => {
     obj = JSON.parse(content)
-    console.log(obj);
-    // console.log(String(content));
+    console.log(obj.date);
   })
-  // return fs.readFile('./source.json', (err,content) => {
-  //   return content.refPk
-  // })
-  // return Math.floor(Math.random()*limit)
 }
-
-module.exports.json_ = jsonPk_.refPk;
