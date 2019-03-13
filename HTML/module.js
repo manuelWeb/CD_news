@@ -14,12 +14,12 @@ const loadJSON = (filepath) => {
       }
     })
   })
-  .then(function name(value) {
-    console.log(value.refPk);
-  })
-  .catch(console.log);
+  // .then(function (value) {
+  //   console.log(value.refPk);
+  // })
+  .catch();
 }
-module.exports.aryPkRead = loadJSON('./source.json')
+module.exports.aryPkRead = loadJSON
 
 
 
