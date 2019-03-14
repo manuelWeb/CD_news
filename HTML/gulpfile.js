@@ -31,20 +31,20 @@ var global_end = ''
 var gulp         = require('gulp'),
     bs           = require('browser-sync'),
     // slim         = require('gulp-slim'),
-    sass         = require('gulp-sass'),
-    plumber      = require('gulp-plumber'),
-    premailer    = require('gulp-premailer'),
-    autoprefixer = require('gulp-autoprefixer'),
-    rename       = require('gulp-rename'),
-    using        = require('gulp-using'),
-    rm           = require('gulp-rimraf'),
+    // sass         = require('gulp-sass'),
+    // plumber      = require('gulp-plumber'),
+    // premailer    = require('gulp-premailer'),
+    // autoprefixer = require('gulp-autoprefixer'),
+    // rename       = require('gulp-rename'),
+    // using        = require('gulp-using'),
+    // rm           = require('gulp-rimraf'),
     rimraf       = require('rimraf'),
-    prettify     = require('gulp-prettify'),
-    changed      = require('gulp-changed'),
+    // prettify     = require('gulp-prettify'),
+    // changed      = require('gulp-changed'),
     fs           = require('fs'),
     imageResize  = require('gulp-image-resize')
 
-const notifier = require('node-notifier')
+// const notifier = require('node-notifier')
 let jsonObj = require('./source.json')
 
 function cb() {
@@ -114,13 +114,33 @@ gulp.task('bs', function() {
 
 const mod_pk = require('./module.js');
 
-mod_pk.aryPkRead('./source.json')
-.then(function (value) {
-  console.log(value.refPk)
-})
+// var test = mod_pk.aryPkRead('./source.json')
+// .then(function (value) {
+//   return 'value is ok ?'+value.refPk
+// })
+// console.log(test);
 
+// diff between 2 obj => lodash
+var _ = require('lodash');
+function difference(object, base) {
+	function changes(object, base) {
+		return _.transform(object, function(result, value, key) {
+			if (!_.isEqual(value, base[key])) {
+				result[key] = (_.isObject(value) && _.isObject(base[key])) ? changes(value, base[key]) : value;
+			}
+		});
+	}
+	return changes(object, base);
+}
+// end diff
 
 const reportChange = (event, ref) => {
+  mod_pk.aryPkRead('./source.json')
+  .then(function (value) {
+    console.log( value.refPk === jsonObj.refPk ? true : false );
+    console.log( value.refPk, jsonObj.refPk );
+    console.log(difference(value.refPk, jsonObj.refPk));
+  })
   console.log(
     '\x1b[30m\x1b[43m%s\x1b[0m',
     `File: ${event.path}, type was ${event.type}, running tasks...`
