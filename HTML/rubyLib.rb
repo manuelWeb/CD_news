@@ -10,15 +10,16 @@ brand = "www.chienchatetcompagnie.com"
 url  = "https://#{brand}/fr/"
 path = "xxx/xxx/xxx/"
 ext  = ".html"
-# recup des pk ref depuis source.json
-# include "json"
+# recup des refpk ref depuis source.json
 file = File.read("source.json")
 data = JSON.parse(file)
 ref = data["refPk"]
 
+# one ary by chunk [URL,LIB,PRICE]
 aryUrl = Array.new
 aryLib = Array.new
 aryPri = Array.new
+
 # build full URL
 ref.each {|i|
   aryUrl.push(url+path+i+ext)
@@ -35,13 +36,10 @@ cpt = 0
 varLib = ''
 aryLib.each { |i|
   if cpt == 0
-    # print "-$putLib = ["
     varLib += "- $putLib = ["
   end
-  # print '"' + i + '"'
   varLib += '"' + i + '"'
   if cpt < aryLib.length-1
-    # print ", "
     varLib += ", "
   end
   cpt+=1
@@ -49,20 +47,17 @@ aryLib.each { |i|
 varLib += "]"
 txt = "_varLib << #{varLib} "
 txt = txt.encode('iso-8859-1')
-puts "#{txt}"
+# puts "#{txt}"
 
 # hash price
 cptPri = 0
 varPri = ''
 aryPri.each { |i|
   if cptPri == 0
-    # print "-$putLib = ["
     varPri += "- $putPri = ["
   end
-  # print '"' + i + '"'
   varPri += '"' + i + '"'
   if cptPri < aryLib.length-1
-    # print ", "
     varPri += ", "
   end
   cptPri+=1
@@ -70,7 +65,7 @@ aryPri.each { |i|
 varPri += "]"
 txt = "_varPri << #{varPri} "
 txt = txt.encode('iso-8859-1')
-puts "#{txt}"
+# puts "#{txt}"
 
 # create ref array + ary nbpk
 cpt2    = 0
@@ -92,9 +87,9 @@ ref.each{ |i|
 }
 varNbpk += "]"
 varRef += "]"
-puts varRef
+# puts varRef
 
-# écriture _varLib.slim
+# écriture _varLib.slim ["$nbpk", "$putLib", "$putPri", "$ref"]
 output = File.open( "src/FR/var/_varLib.slim","w" )
 output << varNbpk + "\n"
 output << varLib + "\n"
@@ -104,44 +99,25 @@ output.close
 
 cpti = 1
 
-# ref.each {|i|
-#   puts "########### i_OnTop:#{i} ##################"
-# }
-
 ref.each {|i|
-  puts "########### i_OnTop:#{i} ##################"
+  # i = ref[0]
   # get online image to save on src/FR/images
   File.open("src/FR/images/pk#{cpti}.jpg", "wb") do |saved_file|
-    # print "open ?:pk#{cpti}!!!!!!!!!!!!! "
+    # print "open ?:pk#{cpti} "
     # the following "open" is provided by open-uri
     open("https://#{brand}/Visuels/Produits/zoom/#{i}_WEB1.jpg", "rb") do |read_file|
-      # print "saved_file:#{i}_WEB1.jpg!!!!!!!!!!!!! "
+      # print "saved_file:#{i}_WEB1.jpg"
       saved_file.write(read_file.read)
     end
   end
 
   # ATTENTION CHECK convert -version IN CLI -> image.width | path | .format "png" | resolution
   image = MiniMagick::Image.new("src/FR/images/pk#{cpti}.jpg")
-  # print "image à resizer::#{image} path::#{image.path} width::#{image.width} "
-  # print "image à resizer::#{image} w::#{image.dimensions} "
-  # puts "images à resizer : #{image.dimensions}, img.path:#{image.path} "
-
-  # # image.crop "300x196+0+0"
-  # # image.colorspace "Gray"
-  # image.write "#{image.path}"
-  # end
 
   image.combine_options do |b|
     b.resize "600x400"
     b.quality "100" # 86 = q:79 fw info
-    # b.depth "7"
-    # b.blur "0x15"
   end
 
   cpti+=1
 }
-# image = MiniMagick::Image.new("src/FR/images/pk#{cpti}.jpg")
-# image.path #=> "input.jpg"
-# image.resolution "75"
-# image.resize "196x196"
-# image.resolution[10,10]

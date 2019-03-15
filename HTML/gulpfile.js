@@ -111,36 +111,17 @@ gulp.task('bs', function() {
   })
 })
 
-
-const mod_pk = require('./module.js');
-
-// var test = mod_pk.aryPkRead('./source.json')
-// .then(function (value) {
-//   return 'value is ok ?'+value.refPk
-// })
-// console.log(test);
-
 // diff between 2 obj => lodash
+const mod_pk = require('./module.js');
 var _ = require('lodash');
-// function difference(object, base) {
-// 	function changes(object, base) {
-// 		return _.transform(object, function(result, value, key) {
-// 			if (!_.isEqual(value, base[key])) {
-// 				result[key] = (_.isObject(value) && _.isObject(base[key])) ? changes(value, base[key]) : value;
-// 			}
-// 		});
-// 	}
-// 	return changes(object, base);
-// }
-// end diff
 
+// 
 const reportChange = (event, ref) => {
+  // diff source.json
   mod_pk.aryPkRead('./source.json')
   .then(function (value) {
     console.log( value.refPk === jsonObj.refPk ? true : false );
     console.log( value.refPk, jsonObj.refPk );
-    // console.log(difference(value.refPk, jsonObj.refPk));
-    // console.log( difference(value, jsonObj) );
     console.log( _.difference(value.refPk, jsonObj.refPk) );
     // console.log(_.difference(["1", "2", "3"], ["5", "2", "10"])) // [ '1', '3' ]
   })
