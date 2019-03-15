@@ -122,16 +122,16 @@ const mod_pk = require('./module.js');
 
 // diff between 2 obj => lodash
 var _ = require('lodash');
-function difference(object, base) {
-	function changes(object, base) {
-		return _.transform(object, function(result, value, key) {
-			if (!_.isEqual(value, base[key])) {
-				result[key] = (_.isObject(value) && _.isObject(base[key])) ? changes(value, base[key]) : value;
-			}
-		});
-	}
-	return changes(object, base);
-}
+// function difference(object, base) {
+// 	function changes(object, base) {
+// 		return _.transform(object, function(result, value, key) {
+// 			if (!_.isEqual(value, base[key])) {
+// 				result[key] = (_.isObject(value) && _.isObject(base[key])) ? changes(value, base[key]) : value;
+// 			}
+// 		});
+// 	}
+// 	return changes(object, base);
+// }
 // end diff
 
 const reportChange = (event, ref) => {
@@ -139,7 +139,10 @@ const reportChange = (event, ref) => {
   .then(function (value) {
     console.log( value.refPk === jsonObj.refPk ? true : false );
     console.log( value.refPk, jsonObj.refPk );
-    console.log(difference(value.refPk, jsonObj.refPk));
+    // console.log(difference(value.refPk, jsonObj.refPk));
+    // console.log( difference(value, jsonObj) );
+    console.log( _.difference(value.refPk, jsonObj.refPk) );
+    // console.log(_.difference(["1", "2", "3"], ["5", "2", "10"])) // [ '1', '3' ]
   })
   console.log(
     '\x1b[30m\x1b[43m%s\x1b[0m',
