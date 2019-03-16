@@ -11,6 +11,8 @@ exec('ruby rubyLib.rb', function(error, stdout, stderr) {
     console.log('stderr: ' + stderr)
   } else if (error) {
     console.log('error: ' + error)
+  } else {
+    console.log('pas de stdout alors par de cb alors pas de gulp.start(\'dev1\')');
   }
 })
 

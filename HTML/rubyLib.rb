@@ -88,7 +88,6 @@ ref.each{ |i|
 varNbpk += "]"
 varRef += "]"
 # puts varRef
-puts "ba alors?"
 
 # écriture _varLib.slim ["$nbpk", "$putLib", "$putPri", "$ref"]
 output = File.open( "src/FR/var/_varLib.slim","w" )
