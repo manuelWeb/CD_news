@@ -1,6 +1,6 @@
-var gulp = require('gulp')
-var premailer = require('gulp-premailer'),
-  replace = require('gulp-replace')
+var gulp      = require('gulp'),
+    premailer = require('gulp-premailer'),
+    replace   = require('gulp-replace');
 
 module.exports = function() {
   // promise = start prettify
@@ -19,7 +19,6 @@ module.exports = function() {
           .pipe(replace('&quot;', "'"))
           // .pipe(replace(/~/g, '&nbsp;'))
           .pipe(gulp.dest('render'))
-          // .pipe(bs.stream())
           .on('end', resolve)
       }),
     ]).then(function() {
