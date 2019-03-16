@@ -1,5 +1,5 @@
 // exec rubyLib.rb
-var exec = require('child_process').exec
+const exec = require('child_process').exec
 console.log('Ruby is running ;)!!!')
 
 exec('ruby rubyLib.rb', function(error, stdout, stderr) {

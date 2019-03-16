@@ -1,8 +1,9 @@
-var gulp = require('gulp')
-var sass = require('gulp-sass')
-var rename = require('gulp-rename')
-var autoprefixer = require('gulp-autoprefixer')
-var replace = require('gulp-replace')
+/* eslint-disable indent */
+const gulp         = require('gulp'),
+      sass         = require('gulp-sass'),
+      rename       = require('gulp-rename'),
+      autoprefixer = require('gulp-autoprefixer');
+
 // Promise
 module.exports = function() {
   gulp.task('sass', function() {

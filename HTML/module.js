@@ -13,20 +13,9 @@ const loadJSON = (filepath) => {
         }
       }
     })
-  })
+  }).catch();
   // .then(function (value) {
   //   console.log(value.refPk);
   // })
-  .catch();
 }
 module.exports.aryPkRead = loadJSON
-
-
-
-
-// module.exports.aryPkRead = (limit=100) => {
-//   fs.readFile('./source.json', (err,content) => {
-//     obj = JSON.parse(content)
-//     console.log(obj.date);
-//   })
-// }

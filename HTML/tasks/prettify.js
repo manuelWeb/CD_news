@@ -1,11 +1,10 @@
-var gulp     = require('gulp');
-var prettify = require('gulp-prettify');
-var rimraf   = require('rimraf');
-var bs       = require('browser-sync');
+const gulp     = require('gulp'),
+      prettify = require('gulp-prettify'),
+      rimraf   = require('rimraf'),
+      bs       = require('browser-sync');
 
 module.exports = function () {
   // promise = THE END tu peux ré enregistrer un truc
-  // prettify
   gulp.task('prettify', function (event) {
     return Promise.all([
       new Promise(function (resolve, reject) {
@@ -16,7 +15,6 @@ module.exports = function () {
           .pipe(bs.stream({ once: true }))
       })
     ]).then(function () {
-      // bs.reload({stream: true })
       console.log('prettify terminé destroyed slim + css folder')
     }).then(function () {
       rimraf('./render/**/slim',function (err) {

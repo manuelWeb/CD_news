@@ -113,10 +113,6 @@
     "mr-l": 4,
     "bdr-l": 6,
     "addLogo": true,
-    "addPromo": false,
-    "topShad": false,
-    "shadLR": false,
-    "shadLR_H": "1140",
     "abspath": false
   },
   "url": {
@@ -128,10 +124,8 @@
     "uk": "no-def"
   },
   "ray": "boutique/rayon_evenement.aspx?urlLangue=fr&nbp=99&pg=0&evenement_id=",
-  "_comment": "",
   "gift": {
     "code": "XXXX",
     "alt": ["", ""]
-  },
-  "prix": "..."
+  }
 }

@@ -1,13 +1,10 @@
-// var jsonObj = require('../gulpfile.js')
-// import jsonObj from '../gulpfile.js'
-// let jsonOrigin = require('../gulpfile.js')
+/* eslint-disable indent */
+const gulp    = require('gulp'),
+      slim    = require('gulp-slim'),
+      foreach = require('gulp-foreach'),
+      rename  = require('gulp-rename'),
+      plumber = require('gulp-plumber');
 
-var gulp = require('gulp')
-var slim = require('gulp-slim')
-var foreach = require('gulp-foreach')
-var rename = require('gulp-rename')
-var bs = require('browser-sync')
-var plumber = require('gulp-plumber')
 // Promise
 module.exports = function() {
   gulp.task('slim', function() {
@@ -40,9 +37,7 @@ module.exports = function() {
           .on('end', resolve)
       }),
     ]).then(function() {
-      // console.log(jsonOrigin === jsonObj.refPk)
-      // console.log('jsonObj:::', jsonObj)
-      console.log(` slim terminé run sass `)
+      console.log(' slim terminé run sass ')
       gulp.start('sass')
     })
   })

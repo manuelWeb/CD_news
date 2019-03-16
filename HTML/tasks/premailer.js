@@ -1,6 +1,7 @@
-var gulp      = require('gulp'),
-    premailer = require('gulp-premailer'),
-    replace   = require('gulp-replace');
+/* eslint-disable indent */
+const gulp      = require('gulp'),
+      premailer = require('gulp-premailer'),
+      replace   = require('gulp-replace');
 
 module.exports = function() {
   // promise = start prettify
