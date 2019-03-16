@@ -100,7 +100,7 @@ gulp.task('bs', function() {
 const mod_pk = require('./module.js');
 var _ = require('lodash');
 
-// 
+// callback on watch task dev1
 const reportChange = (event) => {
   // diff source.json
   mod_pk.aryPkRead('./source.json')
@@ -120,8 +120,9 @@ gulp.task('dev1', ['img', 'slim'], function() {
   gulp.start('build')
 })
 
-// gulp.task('build', ['bs'], function() {
-gulp.task('build', function() {
+// ifdebug use
+// gulp.task('build', function() {
+gulp.task('build', ['bs'], function() {
   gulp
     .watch(
       ['source.json', src + '**/**/*.slim', src + '**/scss/*.scss'],
