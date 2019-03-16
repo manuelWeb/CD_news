@@ -14,13 +14,12 @@ exec('ruby rubyLib.rb', function(error, stdout, stderr) {
   }
 })
 
+// import des taches gulp
 require('./tasks/img.js')()
 require('./tasks/slim.js')()
 require('./tasks/sass.js')() // lire note dependance sass.js
 require('./tasks/premailer.js')()
 require('./tasks/prettify.js')()
-// sys protection contre réécriture avant fin de slim,sass,premailer,prettify.
-var global_end = ''
 
 /*==================================================
 =            npm install gulp --sav-dev            =
@@ -30,19 +29,8 @@ var global_end = ''
 // prettier-ignore
 var gulp         = require('gulp'),
     bs           = require('browser-sync'),
-    // slim         = require('gulp-slim'),
-    // sass         = require('gulp-sass'),
-    // plumber      = require('gulp-plumber'),
-    // premailer    = require('gulp-premailer'),
-    // autoprefixer = require('gulp-autoprefixer'),
-    // rename       = require('gulp-rename'),
-    // using        = require('gulp-using'),
-    // rm           = require('gulp-rimraf'),
     rimraf       = require('rimraf'),
-    // prettify     = require('gulp-prettify'),
-    // changed      = require('gulp-changed'),
-    fs           = require('fs'),
-    imageResize  = require('gulp-image-resize')
+    fs           = require('fs');
 
 // const notifier = require('node-notifier')
 let jsonObj = require('./source.json')
