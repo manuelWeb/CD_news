@@ -1,6 +1,8 @@
 /* eslint-disable indent */
-const gulp    = require('gulp'),
-      slim    = require('gulp-slim'),
+const gulp    = require('gulp')
+// import { gulp } from 'gulp'
+
+const slim    = require('gulp-slim'),
       foreach = require('gulp-foreach'),
       rename  = require('gulp-rename'),
       plumber = require('gulp-plumber');
