@@ -1,8 +1,8 @@
-const fs = require('fs');
+import { readFile } from 'fs'
 
 const loadJSON = (filepath) => {
   return new Promise((resolve, reject) => {
-    fs.readFile(filepath, 'utf8', (err, content) => {
+    readFile(filepath, 'utf8', (err, content) => {
       if(err) {
         reject(err)
       } else {
@@ -13,9 +13,6 @@ const loadJSON = (filepath) => {
         }
       }
     })
-  }).catch();
-  // .then(function (value) {
-  //   console.log(value.refPk);
-  // })
+  }).catch()
 }
-module.exports.aryPkRead = loadJSON
+export const aryPkRead = loadJSON
